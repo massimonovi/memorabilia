@@ -1,0 +1,55 @@
+# Configurazione del wiki - modifica i valori tra virgolette
+site_name: Memorie del Novecento — Wiki di Storia Locale
+site_description: Schede biografiche, articoli e immagini di storia locale toscana
+site_author: Massimo Novi
+# site_url: https://tuonome.github.io/wiki/   # da impostare dopo la pubblicazione
+
+theme:
+  name: material
+  language: it
+  palette:
+    # Tema chiaro
+    - scheme: default
+      primary: brown
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Passa al tema scuro
+    # Tema scuro
+    - scheme: slate
+      primary: brown
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Passa al tema chiaro
+  features:
+    - navigation.instant      # navigazione veloce
+    - navigation.tracking
+    - navigation.top          # bottone "torna su"
+    - search.suggest          # suggerimenti di ricerca
+    - search.highlight        # evidenzia i risultati
+    - content.code.copy
+    - toc.integrate
+
+# Menu laterale: aggiungi qui le nuove schede man mano che le crei
+nav:
+  - Home: index.md
+  - Schede biografiche:
+      - Elenco: biografie/index.md
+      - Esempio - Nome Cognome: biografie/esempio-biografia.md
+  - Articoli:
+      - Elenco: articoli/index.md
+      - Esempio - Titolo articolo: articoli/esempio-articolo.md
+
+markdown_extensions:
+  - admonition              # riquadri colorati (note, avvisi)
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - tables
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search:
+      lang: it
